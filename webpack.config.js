@@ -3,19 +3,20 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 
 export default {
 
-    mode: "development",
+    mode: "production",
 
     entry : "./src/index.js",
 
     output : {
         filename :"bundle.js",
         path : path.resolve("dist"),
-        clean : true
+        clean : true,
+        publicPath : "./"
     },
 
     plugins : [
         new HtmlWebpackPlugin({
-            template : "index.html"
+            template : "./src/index.html"
         })
     ],
 
